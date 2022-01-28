@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
+      order: [[ 'date_created', 'DESC']]
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
@@ -62,11 +63,14 @@ router.get('/post/:id', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password']},
+      attributes: { exclude: ['password'] },
       include: [{
         model: Post,
-        attributes: ['title', 'contents', 'date_created']
-      }]
+        attributes: ['title', 'contents', 'date_created'],  
+      }],
+      order: [
+        [{model: Post}, 'date_created', 'DESC']
+      ]
     });
 
     const user = userData.get({ plain: true });
@@ -79,6 +83,17 @@ router.get('/dashboard', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// GET new post page
+router.get('/new-post', (req, res) => {
+  try {
+    res.render('newpost', {
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 // GET the login page if nobody is logged in yet
 router.get('/login', (req, res) => {

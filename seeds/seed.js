@@ -4,6 +4,7 @@ const { User, Post, Comment } = require('../models');
 const userData = require('./userData.json');
 const postData = require('./postData.json')
 const commentData = require('./commentData.json');
+const { json } = require('express/lib/response');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -16,6 +17,16 @@ const seedDatabase = async () => {
   for (const post of postData) {
     await Post.create({
       ...post,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    })
+  }
+
+  const posts = await Post.findAll();
+
+  for (const comment of commentData) {
+    await Comment.create({
+      ...comment,
+      post_id: posts[Math.floor(Math.random() * posts.length)].id,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     })
   }

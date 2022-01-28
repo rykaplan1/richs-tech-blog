@@ -1,0 +1,177 @@
+:root {
+  --main-bg-color: #1C2F66;
+}
+
+h2 {
+  font-size: 1.5rem;
+  display: inline;
+}
+
+footer h3 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+nav {
+  background-color: var(--main-bg-color);
+  text-decoration: none;
+}
+
+a, #logout {
+  text-decoration:  none;
+  color: whitesmoke;
+}
+
+nav a, #logout {
+  margin: 0 80px;
+  font-size: 1.3rem;
+}
+
+#logout {
+  display: inline
+}
+
+#logout:hover {
+  cursor: pointer;
+  color: #3E6BE6
+}
+
+input {
+  margin: 5px 0;
+}
+
+footer {
+  background-color: var(--main-bg-color);
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.blog-post, #login-signup, #new-post-form {
+  border: 2px solid var(--main-bg-color);
+  border-radius: 5px;
+  padding: 20px 0;
+  padding-top: 0px;
+  margin: 20px;
+}
+
+.blog-post header, #login-signup header, #new-post-form header {
+  color: whitesmoke;
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-post p {
+  margin: 10px;
+}
+
+.date_created {
+  font-size: 1.3rem;
+}
+
+.comment {
+  margin: 20px;
+}
+
+.comment-date {
+  font-style: italic;
+}
+
+#site-name {
+  background-color: whitesmoke;
+  color: var(--main-bg-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#all-posts {
+  margin-bottom: 100px;
+}
+
+#greeting {
+  font-size: 2rem;
+}
+
+#new-post {
+  text-align: center;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  background-color: var(--main-bg-color);
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#new-post-form main {
+  margin: 10px;
+}
+
+#new-post-form .submit {
+  position: relative;
+  left: 93%;
+  margin-top: 10px;
+}
+
+#post-title {
+  font-size: 1.2rem;
+  width: 500px;
+}
+
+#post-contents {
+  margin-left: 55px;
+  width: 93.5%;
+  height: 300px;
+  padding: 5px;
+}
+
+#comments-header, #post-comment, #greeting, #your-posts {
+  margin: 20px;
+  color: var(--main-bg-color);
+}
+
+#comments-header {
+  border-bottom: 2px solid var(--main-bg-color);
+}
+
+#post-comment {
+  border-top: 2px solid var(--main-bg-color);
+  margin: 20px;
+}
+
+#comment-input {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+}
+
+#login-signup main, #new-post main {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#login-signup main section {
+  width: 40%;
+}
+
+#log-in {
+  border-right: 2px solid var(--main-bg-color)
+}
+
+
+@media (max-width: 767px) {
+  nav a {
+    padding: 5px;
+    margin: 29px;
+  }
+}
+

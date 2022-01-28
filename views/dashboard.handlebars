@@ -1,0 +1,8 @@
+<h2 id="greeting">Hi, {{name}}!</h2>
+<h3 id="your-posts">Your posts:</h3>
+<section id="all-posts">
+  {{#each posts as |post|}}
+  {{> blogpost}}
+  {{/each}}
+  <div id="new-post"><a href="/new-post">+ New Post</a></div>
+</section>

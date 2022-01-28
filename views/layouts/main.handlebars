@@ -21,8 +21,32 @@
       }
     </style>
     <link rel='stylesheet' href='/css/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
+    <header>
+      <nav class="navbar justify-content-left text-decoration-none">
+        <div id="site-name">Rich's Tech Blog</div>
+        <div class="links">
+          <a href="/">Home</a>
+          <a href="/dashboard">Dashboard</a>
+          {{#if logged_in}}
+          <div id="logout">Log Out</div>
+          {{else}}
+          <a href="/login">Log In</a>
+          {{/if}}
+        </div>
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      <h3>&copy; 2022</h3>
+    </footer>
 
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>

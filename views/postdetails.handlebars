@@ -1,0 +1,20 @@
+{{> blogpost}}
+<header id="comments-header">
+  <h2>Comments</h2>
+</header>
+<section id="comments">
+  {{#each comments as |comment|}}
+  <div class="comment">
+    <p class="comment-contents">{{comment.contents}}</p>
+    <p class="comment-date">Posted by {{comment.user.name}} on {{format_date comment.date_created}}</p>
+  </div>
+  {{/each}}
+</section>
+<section id="post-comment">
+  <h2 id="post-comment-title">Post a Comment</h2>
+  <textarea id="comment-input"></textarea>
+  <button class="submit">Submit</button>
+</section>
+
+<script src="/js/post-comment.js"></script>
+

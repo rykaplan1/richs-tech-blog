@@ -1,0 +1,13 @@
+<section class="blog-post">
+  <header>
+    <h2><a href="/post/{{id}}">{{title}}</a></h2>
+    {{#if user.name}}
+    <span class="date-created">Posted by {{user.name}} on {{format_date date_created}}</span>
+    {{else}}
+     <span class="date-created">Posted on {{format_date date_created}}</span>
+    {{/if}}
+  </header>
+  <article>
+    <p>{{contents}}</p>
+  </article>
+</section>
