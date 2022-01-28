@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Object-Oriented Programming",
+    "contents": "Object-oriented programming is a modern software paradigm for the current age."
+  },
+  {
+    "title": "Express",
+    "contents": "Express makes back-end routing a breeze!"
+  },
+  {
+    "title": "SQL",
+    "contents": "SQL is a must-have for any website in need of a robust and easily usable database!"
+  },
+  {
+    "title": "Handlebars",
+    "contents": "Handlebars is a great way to create reusable templates."
+  },
+  {
+    "title": "Linters",
+    "contents": "Linters are useful development tools to prevent bugs before they are written."
+  }
+
+]
